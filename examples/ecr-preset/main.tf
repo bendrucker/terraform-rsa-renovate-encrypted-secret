@@ -1,5 +1,9 @@
+variable "repo_name" {
+  type = string
+}
+
 resource "aws_ecr_repository" "ecr" {
-  name = "docker"
+  name = var.repo_name
 }
 
 resource "aws_ecr_repository_policy" "ecr" {

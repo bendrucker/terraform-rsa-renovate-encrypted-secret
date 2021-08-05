@@ -1,7 +1,11 @@
+variable "plaintext" {
+  type = string
+}
+
 module "renovate_encrypted" {
   source = "../.."
 
-  plaintext = "super secret"
+  plaintext = var.plaintext
 }
 
 output "encrypted" {
