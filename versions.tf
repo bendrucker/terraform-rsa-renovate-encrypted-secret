@@ -3,7 +3,7 @@ terraform {
 
   required_providers {
     rsa = {
-      source = "bendrucker/rsa"
+      source  = "bendrucker/rsa"
       version = "~> 1"
     }
   }
