@@ -1,0 +1,1 @@
+This is a basic example that encrypts plaintext and exposes is as an output.
