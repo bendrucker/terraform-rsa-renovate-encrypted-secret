@@ -1,2 +1,7 @@
 # terraform-rsa-renovate-encrypted-secret
-Terraform module for encrypting secrets for Renovate (https://app.renovatebot.com/encrypt)
+
+> Terraform module for encrypting secrets for Renovate
+
+[Renovate](https://github.com/renovatebot/renovate) is a tool for automatically updating dependencies in your projects, similar to [GitHub Dependabot](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates). As a native service, Dependabot is given read access to GitHub Actions organization secrets to [access private registries](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/configuration-options-for-dependency-updates#configuration-options-for-private-registries). Terraform can manage these secrets using the [`github_actions_organization_secret`](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_organization_secret) resource. Renovate, as a third party GitHub app, [does not access GitHub Actions secrets](https://docs.renovatebot.com/private-modules/#access-to-github-actions-secrets). Instead, Renovate allows users to [encrypt secrets](https://docs.renovatebot.com/private-modules/#encrypting-secrets) using Renovate's public key and include the encrypted value in the Renovate configuration. Renovate's servers hold the private key and can decrypt the original plaintext value.
+
+This module performs the same public key encryption as [app.renovatebot.com/encrypt](https://app.renovatebot.com/encrypt), enabling secure and fully automated secret management for Renovate, using Terraform. 
