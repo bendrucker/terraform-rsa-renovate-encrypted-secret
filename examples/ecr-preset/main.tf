@@ -15,7 +15,8 @@ data "aws_iam_policy_document" "ecr" {
     ]
 
     principals {
-      aws = aws_iam_user.renovate.arn
+      type = "AWS"
+      identifiers = [aws_iam_user.renovate.arn]
     }
   }
 }
