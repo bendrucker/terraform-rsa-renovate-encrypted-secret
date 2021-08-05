@@ -1,4 +1,4 @@
-# terraform-rsa-renovate-encrypted-secret
+# terraform-rsa-renovate-encrypted-secret [![terraform module](https://img.shields.io/badge/terraform-module-623CE4)](https://registry.terraform.io/modules/bendrucker/renovate-encrypted-secret/rsa)
 
 > Terraform module for encrypting secrets for Renovate
 
